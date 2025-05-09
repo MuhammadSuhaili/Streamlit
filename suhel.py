@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 from PIL import Image
 
-st.title("🔍 Perbandingan Canny Edge Detection: Fixed vs Adaptive Threshold")
+st.title("Perbandingan Canny Edge Detection: Fixed vs Adaptive Threshold")
 
 # Upload gambar
 uploaded_file = st.file_uploader("📂 Upload gambar", type=["jpg", "jpeg", "png"])
@@ -25,8 +25,8 @@ if uploaded_file is not None:
     canny_adaptive = cv2.Canny(img_gray, lower, upper)
 
     # Tampilkan info threshold
-    st.markdown(f"📊 **Median nilai piksel grayscale**: `{median_val}`")
-    st.markdown(f"🔧 **Threshold Adaptive Canny** → Lower: `{lower}`, Upper: `{upper}`")
+    st.markdown(f"**Median nilai piksel grayscale**: `{median_val}`")
+    st.markdown(f"**Threshold Adaptive Canny** → Lower: `{lower}`, Upper: `{upper}`")
 
     # Tampilkan hasil dalam 3 kolom
     st.subheader("📸 Hasil Deteksi Tepi")
